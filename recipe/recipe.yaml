@@ -1,6 +1,6 @@
 context:
-  version: "1.0.4"
-  build: 1
+  version: "1.2.0"
+  build: 0
 
 recipe:
   name: patchworkpp
@@ -8,7 +8,7 @@ recipe:
 
 source:
   url: https://github.com/url-kaist/patchwork-plusplus/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 0d3e3376bffd1cc0a206a391086c79e0ab5df8f1a247c79fdb8a22bd87129ed7
+  sha256: 57694026b934296b7b0b6c67069f32454a4151d9d8a71e99d6348679bb2f72b8
   patches:
     - patches/python-use-system-patchworkpp.patch
     - patches/cpp-static-to-shared.patch
