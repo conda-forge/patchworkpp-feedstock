@@ -1,6 +1,6 @@
 context:
-  version: "1.0.4"
-  build: 1
+  version: "1.3.1"
+  build: 0
 
 recipe:
   name: patchworkpp
@@ -8,7 +8,7 @@ recipe:
 
 source:
   url: https://github.com/url-kaist/patchwork-plusplus/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 0d3e3376bffd1cc0a206a391086c79e0ab5df8f1a247c79fdb8a22bd87129ed7
+  sha256: 533c0446b146442eee5742a65d084b67a038f8d093359f8df3b6749c299c5190
   patches:
     - patches/python-use-system-patchworkpp.patch
     - patches/cpp-static-to-shared.patch
@@ -29,7 +29,7 @@ outputs:
       build:
         - ${{ stdlib('c') }}
         - ${{ compiler('cxx') }}
-        - cmake
+        - cmake <4
         - ninja
       host:
         - eigen
@@ -52,7 +52,7 @@ outputs:
       build:
         - ${{ stdlib('c') }}
         - ${{ compiler('cxx') }}
-        - cmake
+        - cmake <4
         - ninja
       host:
         - python
