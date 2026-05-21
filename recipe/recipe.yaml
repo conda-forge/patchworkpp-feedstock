@@ -9,6 +9,7 @@ recipe:
 source:
   url: https://github.com/url-kaist/patchwork-plusplus/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 7da16275f988e946348e9529ea80b284e0793ff8197972510440570c733bdd4e
+
   patches:
     - patches/python-use-system-patchworkpp.patch
     - patches/cpp-static-to-shared.patch
@@ -29,7 +30,7 @@ outputs:
       build:
         - ${{ stdlib('c') }}
         - ${{ compiler('cxx') }}
-        - cmake
+        - cmake <4
         - ninja
       host:
         - eigen
@@ -52,7 +53,7 @@ outputs:
       build:
         - ${{ stdlib('c') }}
         - ${{ compiler('cxx') }}
-        - cmake
+        - cmake <4
         - ninja
       host:
         - python
