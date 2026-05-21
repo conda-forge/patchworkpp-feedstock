@@ -52,7 +52,7 @@ outputs:
       build:
         - ${{ stdlib('c') }}
         - ${{ compiler('cxx') }}
-        - cmake
+        - cmake <4
         - ninja
       host:
         - python
