@@ -1,5 +1,5 @@
 context:
-  version: "1.4.0"
+  version: "1.4.1"
   build: 1
 
 recipe:
@@ -8,7 +8,7 @@ recipe:
 
 source:
   url: https://github.com/url-kaist/patchwork-plusplus/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 7da16275f988e946348e9529ea80b284e0793ff8197972510440570c733bdd4e
+  sha256: 00f2455af0c66e7bb1938396e3b7483491608803032c2623728164b91ff889a7
 
   patches:
     - patches/python-use-system-patchworkpp.patch
